@@ -52,6 +52,8 @@ final class Channel {
     var callbackCount: UInt64 { route.map { MixerChannelStateGetCallbackCount($0.state) } ?? 0 }
     var inputPeak: Float { route.map { MixerChannelStateGetInputPeak($0.state) } ?? 0 }
     var tapObjectID: AudioObjectID { tapID }
+    /// The app's processes currently in the tap, sorted.
+    var processes: [AudioObjectID] { tapDescription.processes.sorted() }
     var targetGain: Float { route.map { MixerChannelStateGetTargetGain($0.state) } ?? 0 }
 
     /// A helper process joined or left: edit the tap in place, or rebuild make-before-break.
