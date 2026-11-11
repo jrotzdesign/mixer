@@ -1,0 +1,30 @@
+name: Mixer
+options:
+  bundleIdPrefix: com.jrortizdesign
+  deploymentTarget:
+    macOS: "14.2"
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.2"
+    # Personal Team signing (free Apple ID). Set DEVELOPMENT_TEAM to "" and CODE_SIGN_IDENTITY to "-" to sign ad hoc.
+    DEVELOPMENT_TEAM: "723G9BWXPS"
+    CODE_SIGN_STYLE: Automatic
+    CODE_SIGN_IDENTITY: "Apple Development"
+    ENABLE_HARDENED_RUNTIME: NO
+targets:
+  Mixer:
+    type: application
+    platform: macOS
+    sources:
+      - path: Mixer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jrortizdesign.mixer
+        PRODUCT_NAME: Mixer
+        INFOPLIST_FILE: Mixer/Resources/Info.plist
+        SWIFT_OBJC_BRIDGING_HEADER: Mixer/Engine/Mixer-Bridging-Header.h
+        ENABLE_APP_SANDBOX: NO
+        GCC_C_LANGUAGE_STANDARD: gnu17
+        GCC_OPTIMIZATION_LEVEL: s

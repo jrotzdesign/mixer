@@ -1,0 +1,13 @@
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+*.xcscmblueprint
+.swiftpm/
+.build/
+# macOS
+.DS_Store
+# local test artifacts
+scripts/out/
+.superpowers/
