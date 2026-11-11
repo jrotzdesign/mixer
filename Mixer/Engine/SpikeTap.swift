@@ -30,7 +30,7 @@ final class SpikeTap {
     }
 
     private let options: Options
-    private let log: SpikeLog
+    private let log: MixerLog
     private let state: UnsafeMutablePointer<MixerChannelState>
     private var tapID = AudioObjectID.unknown
     private var aggregateID = AudioObjectID.unknown
@@ -39,7 +39,7 @@ final class SpikeTap {
 
     init(options: Options) {
         self.options = options
-        self.log = SpikeLog(name: options.observe ? "observe.log" : "spike.log")
+        self.log = MixerLog(name: options.observe ? "observe.log" : "spike.log")
         state = .allocate(capacity: 1)
         MixerChannelStateInit(state, options.gain)
     }
@@ -157,8 +157,8 @@ final class SpikeTap {
     }
 }
 
-/// Appends timestamped lines to ~/Library/Logs/Mixer/spike.log.
-struct SpikeLog {
+/// Appends timestamped lines to a file in ~/Library/Logs/Mixer/.
+struct MixerLog {
     let url: URL
 
     init(name: String = "spike.log") {

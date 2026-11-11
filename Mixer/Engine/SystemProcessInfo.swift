@@ -42,6 +42,6 @@ final class SystemProcessInfo: ProcessInfoSource {
         var buffer = [CChar](repeating: 0, count: 4 * Int(MAXPATHLEN))  // PROC_PIDPATHINFO_MAXSIZE
         let n = proc_pidpath(pid, &buffer, UInt32(buffer.count))
         guard n > 0 else { return nil }
-        return String(cString: buffer)
+        return String(decoding: buffer.prefix(Int(n)).map { UInt8(bitPattern: $0) }, as: UTF8.self)
     }
 }

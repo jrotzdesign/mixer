@@ -19,6 +19,7 @@
 		BBD6DDE3ED6961BFDDB3078E /* MixerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC6C24183BC97C8382059 /* MixerApp.swift */; };
 		D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */; };
 		D61D04125CF5EA9CD78AEF32 /* AppResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */; };
+		FC0CF4AC33E5AB974B0A0CB8 /* ProcessMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C460F230104CDBB2641127E /* ProcessMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		16FCAB1552ADD70F533A714D /* AppResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolver.swift; sourceTree = "<group>"; };
 		24CCC6C24183BC97C8382059 /* MixerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerApp.swift; sourceTree = "<group>"; };
 		33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixer-Bridging-Header.h"; sourceTree = "<group>"; };
+		3C460F230104CDBB2641127E /* ProcessMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessMonitor.swift; sourceTree = "<group>"; };
 		3D3F55C969CDBEC79F55BA45 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		3F01703D7BF5B297BC095706 /* SystemProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProcessInfo.swift; sourceTree = "<group>"; };
 		888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCapturePermission.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */,
 				C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */,
 				D2B352CEB873C38B15838F1B /* MixerDSP.h */,
+				3C460F230104CDBB2641127E /* ProcessMonitor.swift */,
 				8FDB45B57036D365079BED89 /* SpikeTap.swift */,
 				3F01703D7BF5B297BC095706 /* SystemProcessInfo.swift */,
 			);
@@ -229,6 +232,7 @@
 				D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */,
 				BBD6DDE3ED6961BFDDB3078E /* MixerApp.swift in Sources */,
 				719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */,
+				FC0CF4AC33E5AB974B0A0CB8 /* ProcessMonitor.swift in Sources */,
 				2200116849EA59371477B115 /* SettingsStore.swift in Sources */,
 				AA3001865A9D9479592B7873 /* SpikeTap.swift in Sources */,
 				89A7993DD17CA33F66FFC089 /* SystemProcessInfo.swift in Sources */,

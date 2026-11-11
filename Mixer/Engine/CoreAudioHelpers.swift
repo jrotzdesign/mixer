@@ -96,3 +96,40 @@ extension AudioObjectPropertySelector {
         return String(bytes: bytes, encoding: .ascii) ?? "\(self)"
     }
 }
+
+/// A registered property listener; call `cancel()` to remove it.
+final class ListenerToken {
+    private let objectID: AudioObjectID
+    private var address: AudioObjectPropertyAddress
+    private let queue: DispatchQueue
+    private let block: AudioObjectPropertyListenerBlock
+    private var active = true
+
+    fileprivate init(objectID: AudioObjectID, address: AudioObjectPropertyAddress,
+                     queue: DispatchQueue, block: @escaping AudioObjectPropertyListenerBlock) {
+        self.objectID = objectID
+        self.address = address
+        self.queue = queue
+        self.block = block
+    }
+
+    func cancel() {
+        guard active else { return }
+        active = false
+        AudioObjectRemovePropertyListenerBlock(objectID, &address, queue, block)
+    }
+
+    deinit { cancel() }
+}
+
+extension AudioObjectID {
+    /// Calls `handler` on the main queue whenever the property changes.
+    func addListener(_ selector: AudioObjectPropertySelector,
+                     scope: AudioObjectPropertyScope = kAudioObjectPropertyScopeGlobal,
+                     handler: @escaping @Sendable () -> Void) throws -> ListenerToken {
+        var addr = address(selector, scope: scope)
+        let block: AudioObjectPropertyListenerBlock = { _, _ in handler() }
+        try check(AudioObjectAddPropertyListenerBlock(self, &addr, .main, block), "listen \(selector.fourCC) on \(self)")
+        return ListenerToken(objectID: self, address: addr, queue: .main, block: block)
+    }
+}
