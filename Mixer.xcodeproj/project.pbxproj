@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */; };
 		719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */ = {isa = PBXBuildFile; fileRef = C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */; };
 		A05C91C6AB61F280A04AF32C /* AudioCapturePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */; };
 		AA3001865A9D9479592B7873 /* SpikeTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB45B57036D365079BED89 /* SpikeTap.swift */; };
@@ -14,15 +15,27 @@
 		D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		4410F64233A8A14990CCAB9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 35EAAE4AF482F62EDD76D5DF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FE9708DC0BCBEBA986E9423;
+			remoteInfo = Mixer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		24CCC6C24183BC97C8382059 /* MixerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerApp.swift; sourceTree = "<group>"; };
 		33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixer-Bridging-Header.h"; sourceTree = "<group>"; };
 		888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCapturePermission.swift; sourceTree = "<group>"; };
 		8FDB45B57036D365079BED89 /* SpikeTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpikeTap.swift; sourceTree = "<group>"; };
 		B7058C0322655A8BBFD716F4 /* Mixer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mixer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9EC171C7E5E1E4EF734A592 /* MixerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MixerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MixerDSP.c; sourceTree = "<group>"; };
 		CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAudioHelpers.swift; sourceTree = "<group>"; };
 		D2B352CEB873C38B15838F1B /* MixerDSP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixerDSP.h; sourceTree = "<group>"; };
+		D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPTests.swift; sourceTree = "<group>"; };
 		DDFEF726F63863CC7D713DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -31,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				2743B8B1AEB86D261C900276 /* Mixer */,
+				71870848530CEA8FA02BD008 /* MixerTests */,
 				C07569AE0DE80AEA598A069A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +80,14 @@
 			path = Engine;
 			sourceTree = "<group>";
 		};
+		71870848530CEA8FA02BD008 /* MixerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */,
+			);
+			path = MixerTests;
+			sourceTree = "<group>";
+		};
 		83E6F59708FBE92AFCEADCA6 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B7058C0322655A8BBFD716F4 /* Mixer.app */,
+				B9EC171C7E5E1E4EF734A592 /* MixerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +125,24 @@
 			productReference = B7058C0322655A8BBFD716F4 /* Mixer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		60B15513B34CDFAC5399DC81 /* MixerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 021E75300E2DD74C3D18429A /* Build configuration list for PBXNativeTarget "MixerTests" */;
+			buildPhases = (
+				064D1589F419D0752ACC5217 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5549DA81ED2A7104DFE16AF /* PBXTargetDependency */,
+			);
+			name = MixerTests;
+			packageProductDependencies = (
+			);
+			productName = MixerTests;
+			productReference = B9EC171C7E5E1E4EF734A592 /* MixerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -112,6 +153,10 @@
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					2FE9708DC0BCBEBA986E9423 = {
+						DevelopmentTeam = 723G9BWXPS;
+						ProvisioningStyle = Automatic;
+					};
+					60B15513B34CDFAC5399DC81 = {
 						DevelopmentTeam = 723G9BWXPS;
 						ProvisioningStyle = Automatic;
 					};
@@ -132,11 +177,20 @@
 			projectRoot = "";
 			targets = (
 				2FE9708DC0BCBEBA986E9423 /* Mixer */,
+				60B15513B34CDFAC5399DC81 /* MixerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		064D1589F419D0752ACC5217 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56DB20DDF184E2462612A7E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,7 +205,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E5549DA81ED2A7104DFE16AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FE9708DC0BCBEBA986E9423 /* Mixer */;
+			targetProxy = 4410F64233A8A14990CCAB9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1071E4AD7FB3B269EDE84864 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrortizdesign.mixer.tests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mixer/Engine/Mixer-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mixer.app/Contents/MacOS/Mixer";
+			};
+			name = Release;
+		};
+		57F8838BF34673F2B02DA578 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrortizdesign.mixer.tests;
+				SDKROOT = macosx;
+				SWIFT_OBJC_BRIDGING_HEADER = "Mixer/Engine/Mixer-Bridging-Header.h";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mixer.app/Contents/MacOS/Mixer";
+			};
+			name = Debug;
+		};
 		76B3BBD75C68863C38E454F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -322,6 +420,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		021E75300E2DD74C3D18429A /* Build configuration list for PBXNativeTarget "MixerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57F8838BF34673F2B02DA578 /* Debug */,
+				1071E4AD7FB3B269EDE84864 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		9882BDDE39FDC0776E334F67 /* Build configuration list for PBXNativeTarget "Mixer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

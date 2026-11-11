@@ -19,6 +19,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var spike: SpikeTap?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        // Unit tests run hosted in this app; never touch live audio while they run.
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil { return }
         if CommandLine.arguments.contains("--request-permission") {
             let log = SpikeLog()
             log.write("permission_before=\(AudioCapturePermission.status.rawValue)")

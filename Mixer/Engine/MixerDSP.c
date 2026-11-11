@@ -3,7 +3,8 @@
 #include <string.h>
 
 #define MIXER_MAX_CHANNELS 32
-#define MIXER_LIMIT_KNEE 0.891f  // -1 dBFS
+#define MIXER_LIMIT_KNEE 0.891f     // -1 dBFS: below this, samples pass untouched
+#define MIXER_LIMIT_CEILING 0.98f   // limiter output never reaches full scale
 
 void MixerChannelStateInit(MixerChannelState *state, float gain) {
     atomic_store_explicit(&state->targetGain, gain, memory_order_relaxed);
@@ -32,7 +33,7 @@ uint64_t MixerChannelStateGetCallbackCount(MixerChannelState *state) {
 float MixerSoftLimit(float x) {
     float a = fabsf(x);
     if (a <= MIXER_LIMIT_KNEE) return x;
-    float range = 1.0f - MIXER_LIMIT_KNEE;
+    float range = MIXER_LIMIT_CEILING - MIXER_LIMIT_KNEE;
     float y = MIXER_LIMIT_KNEE + range * tanhf((a - MIXER_LIMIT_KNEE) / range);
     return x < 0.0f ? -y : y;
 }
@@ -48,6 +49,22 @@ static void MixerProcessStrided(MixerChannelState *state,
     float step = frames > 0 ? (g1 - g0) / (float)frames : 0.0f;
     int limit = (g0 > 1.0f || g1 > 1.0f);
     float peak = 0.0f;
+
+    if (outCh == 1 && inCh >= 2) {
+        // Mono output: average the stereo pair.
+        float *o = outPtr[0];
+        uint32_t os = outStride[0];
+        for (uint32_t f = 0; f < frames; f++) {
+            float l = inPtr[0][f * inStride[0]];
+            float r = inPtr[1][f * inStride[1]];
+            float al = fabsf(l), ar = fabsf(r);
+            if (al > peak) peak = al;
+            if (ar > peak) peak = ar;
+            float y = (l + r) * 0.5f * (g0 + step * (float)f);
+            o[f * os] = limit ? MixerSoftLimit(y) : y;
+        }
+        outCh = 0;  // skip the per-channel loop below
+    }
 
     for (uint32_t c = 0; c < outCh; c++) {
         float *o = outPtr[c];

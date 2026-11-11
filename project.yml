@@ -28,3 +28,18 @@ targets:
         ENABLE_APP_SANDBOX: NO
         GCC_C_LANGUAGE_STANDARD: gnu17
         GCC_OPTIMIZATION_LEVEL: s
+    scheme:
+      testTargets:
+        - MixerTests
+  MixerTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: MixerTests
+    dependencies:
+      - target: Mixer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.jrortizdesign.mixer.tests
+        SWIFT_OBJC_BRIDGING_HEADER: Mixer/Engine/Mixer-Bridging-Header.h
+        GENERATE_INFOPLIST_FILE: YES
