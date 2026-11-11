@@ -11,11 +11,14 @@
 		207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */; };
 		2200116849EA59371477B115 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F55C969CDBEC79F55BA45 /* SettingsStore.swift */; };
 		3F9F1B8C0B72EB08970F8E31 /* AppVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A824F669730108F6DBF8673 /* AppVolume.swift */; };
+		5391AEE1FC8E8C7E57179623 /* AppResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCAB1552ADD70F533A714D /* AppResolver.swift */; };
 		719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */ = {isa = PBXBuildFile; fileRef = C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */; };
+		89A7993DD17CA33F66FFC089 /* SystemProcessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F01703D7BF5B297BC095706 /* SystemProcessInfo.swift */; };
 		A05C91C6AB61F280A04AF32C /* AudioCapturePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */; };
 		AA3001865A9D9479592B7873 /* SpikeTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB45B57036D365079BED89 /* SpikeTap.swift */; };
 		BBD6DDE3ED6961BFDDB3078E /* MixerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC6C24183BC97C8382059 /* MixerApp.swift */; };
 		D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */; };
+		D61D04125CF5EA9CD78AEF32 /* AppResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,9 +33,11 @@
 
 /* Begin PBXFileReference section */
 		0A824F669730108F6DBF8673 /* AppVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVolume.swift; sourceTree = "<group>"; };
+		16FCAB1552ADD70F533A714D /* AppResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolver.swift; sourceTree = "<group>"; };
 		24CCC6C24183BC97C8382059 /* MixerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerApp.swift; sourceTree = "<group>"; };
 		33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixer-Bridging-Header.h"; sourceTree = "<group>"; };
 		3D3F55C969CDBEC79F55BA45 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		3F01703D7BF5B297BC095706 /* SystemProcessInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemProcessInfo.swift; sourceTree = "<group>"; };
 		888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioCapturePermission.swift; sourceTree = "<group>"; };
 		8FC4186B5BA105C4DD62FA98 /* VolumeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VolumeTests.swift; sourceTree = "<group>"; };
 		8FDB45B57036D365079BED89 /* SpikeTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpikeTap.swift; sourceTree = "<group>"; };
@@ -43,6 +48,7 @@
 		D2B352CEB873C38B15838F1B /* MixerDSP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MixerDSP.h; sourceTree = "<group>"; };
 		D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPTests.swift; sourceTree = "<group>"; };
 		DDFEF726F63863CC7D713DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -77,12 +83,14 @@
 		5EA7CEE9A66E83F281D3B342 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
+				16FCAB1552ADD70F533A714D /* AppResolver.swift */,
 				888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */,
 				CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */,
 				33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */,
 				C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */,
 				D2B352CEB873C38B15838F1B /* MixerDSP.h */,
 				8FDB45B57036D365079BED89 /* SpikeTap.swift */,
+				3F01703D7BF5B297BC095706 /* SystemProcessInfo.swift */,
 			);
 			path = Engine;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 		71870848530CEA8FA02BD008 /* MixerTests */ = {
 			isa = PBXGroup;
 			children = (
+				ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */,
 				D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */,
 				8FC4186B5BA105C4DD62FA98 /* VolumeTests.swift */,
 			);
@@ -204,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61D04125CF5EA9CD78AEF32 /* AppResolverTests.swift in Sources */,
 				207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */,
 				1B0F73C8513B2B9AC5B2D478 /* VolumeTests.swift in Sources */,
 			);
@@ -213,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5391AEE1FC8E8C7E57179623 /* AppResolver.swift in Sources */,
 				3F9F1B8C0B72EB08970F8E31 /* AppVolume.swift in Sources */,
 				A05C91C6AB61F280A04AF32C /* AudioCapturePermission.swift in Sources */,
 				D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */,
@@ -220,6 +231,7 @@
 				719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */,
 				2200116849EA59371477B115 /* SettingsStore.swift in Sources */,
 				AA3001865A9D9479592B7873 /* SpikeTap.swift in Sources */,
+				89A7993DD17CA33F66FFC089 /* SystemProcessInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
