@@ -10,6 +10,7 @@
 		1B0F73C8513B2B9AC5B2D478 /* VolumeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FC4186B5BA105C4DD62FA98 /* VolumeTests.swift */; };
 		207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */; };
 		2200116849EA59371477B115 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3F55C969CDBEC79F55BA45 /* SettingsStore.swift */; };
+		3135F064C099D0B04D903348 /* ChannelPlanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1142E914D488E634436FF8AD /* ChannelPlanner.swift */; };
 		3F9F1B8C0B72EB08970F8E31 /* AppVolume.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A824F669730108F6DBF8673 /* AppVolume.swift */; };
 		5391AEE1FC8E8C7E57179623 /* AppResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FCAB1552ADD70F533A714D /* AppResolver.swift */; };
 		719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */ = {isa = PBXBuildFile; fileRef = C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */; };
@@ -17,6 +18,7 @@
 		A05C91C6AB61F280A04AF32C /* AudioCapturePermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */; };
 		AA3001865A9D9479592B7873 /* SpikeTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FDB45B57036D365079BED89 /* SpikeTap.swift */; };
 		BBD6DDE3ED6961BFDDB3078E /* MixerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CCC6C24183BC97C8382059 /* MixerApp.swift */; };
+		C87E02E22F7BA4F41EEE25B0 /* ChannelPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AEF749992ADA70EAB58A0CD /* ChannelPlannerTests.swift */; };
 		D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */; };
 		D61D04125CF5EA9CD78AEF32 /* AppResolverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */; };
 		FC0CF4AC33E5AB974B0A0CB8 /* ProcessMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C460F230104CDBB2641127E /* ProcessMonitor.swift */; };
@@ -34,6 +36,8 @@
 
 /* Begin PBXFileReference section */
 		0A824F669730108F6DBF8673 /* AppVolume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVolume.swift; sourceTree = "<group>"; };
+		0AEF749992ADA70EAB58A0CD /* ChannelPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelPlannerTests.swift; sourceTree = "<group>"; };
+		1142E914D488E634436FF8AD /* ChannelPlanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelPlanner.swift; sourceTree = "<group>"; };
 		16FCAB1552ADD70F533A714D /* AppResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppResolver.swift; sourceTree = "<group>"; };
 		24CCC6C24183BC97C8382059 /* MixerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MixerApp.swift; sourceTree = "<group>"; };
 		33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Mixer-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				16FCAB1552ADD70F533A714D /* AppResolver.swift */,
 				888F3BFCE8EF245E5D37537F /* AudioCapturePermission.swift */,
+				1142E914D488E634436FF8AD /* ChannelPlanner.swift */,
 				CE1D4CEEE32EBA6C8F75991E /* CoreAudioHelpers.swift */,
 				33FD99FC1A36DA527D63188F /* Mixer-Bridging-Header.h */,
 				C40DB82B2D53DC4AB24B6C3C /* MixerDSP.c */,
@@ -102,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				ED7E914FE069D9CB5D62B117 /* AppResolverTests.swift */,
+				0AEF749992ADA70EAB58A0CD /* ChannelPlannerTests.swift */,
 				D77EAB3161CD6F7C8C416C9E /* DSPTests.swift */,
 				8FC4186B5BA105C4DD62FA98 /* VolumeTests.swift */,
 			);
@@ -217,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D61D04125CF5EA9CD78AEF32 /* AppResolverTests.swift in Sources */,
+				C87E02E22F7BA4F41EEE25B0 /* ChannelPlannerTests.swift in Sources */,
 				207CA91C17593337728CBAA3 /* DSPTests.swift in Sources */,
 				1B0F73C8513B2B9AC5B2D478 /* VolumeTests.swift in Sources */,
 			);
@@ -229,6 +236,7 @@
 				5391AEE1FC8E8C7E57179623 /* AppResolver.swift in Sources */,
 				3F9F1B8C0B72EB08970F8E31 /* AppVolume.swift in Sources */,
 				A05C91C6AB61F280A04AF32C /* AudioCapturePermission.swift in Sources */,
+				3135F064C099D0B04D903348 /* ChannelPlanner.swift in Sources */,
 				D03D498FD9B7EEACC5708649 /* CoreAudioHelpers.swift in Sources */,
 				BBD6DDE3ED6961BFDDB3078E /* MixerApp.swift in Sources */,
 				719E62983126CAE1BEC2CF46 /* MixerDSP.c in Sources */,
